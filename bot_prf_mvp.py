@@ -14,8 +14,8 @@ import requests
 # Suporte ao PostgreSQL do Supabase (com fallback para SQLite)
 DATABASE_URL = os.getenv("DATABASE_URL")
 if DATABASE_URL:
-    import psycopg2
-    # Ajuste para a sintaxe do SQLAlchemy/Psycopg2 se a URL vier como postgres://
+    import psycopg3
+    # Ajuste para a sintaxe do SQLAlchemy/Psycopg3 se a URL vier como postgres://
     if DATABASE_URL.startswith("postgres://"):
         DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
